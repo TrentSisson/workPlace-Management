@@ -7,10 +7,19 @@ export const NavBar = (props) => {
     <nav className="navbar bg-dark text-white flex-md-nowrap p-0 shadow">
       <ul className="nav nav-pills nav-fill">
         <li className="nav-item">
-          <Link className="nav-link" to="">Home</Link>
+          <Link className="nav-link" to="/createEmployee">Create Employee</Link>
         </li>
-        
-        
+        <li className="nav-item">
+          <Link className="nav-link" to="/createTask">Create Task</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/employeeList">Employee List</Link>
+        </li>
+
+        <li className="nav-item">
+          <Link className="nav-link" to="/">Task List</Link>
+        </li>
+
       </ul>
     </nav>
   )

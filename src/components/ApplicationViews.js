@@ -1,2 +1,2 @@
 export const ApplicationViews =(props) =>{
-    return (null)}
+    return ("hi")}
