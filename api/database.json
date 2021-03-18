@@ -1,0 +1,16 @@
+{
+  "managers": [
+    {
+      "id": 1,
+      "name": "trent",
+      "email": "trent@gmail.com",
+      "password": "goku"
+    },
+    {
+      "email": "jaba@gmail.com",
+      "name": "jaba",
+      "password": "food",
+      "id": 2
+    }
+  ]
+}

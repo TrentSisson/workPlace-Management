@@ -5,7 +5,7 @@ import "./Login.css"
 
 export const Register = () => {
 
-    const [registerUser, setRegisterUser] = useState({ firstName: "", lastName: "", email: "" })
+    const [registerUser, setRegisterUser] = useState({ name: "", password: "", email: "" })
     const [conflictDialog, setConflictDialog] = useState(false)
 
     const history = useHistory()
@@ -36,7 +36,8 @@ export const Register = () => {
                         },
                         body: JSON.stringify({
                             email: registerUser.email,
-                            name: `${registerUser.firstName} ${registerUser.lastName}`
+                            name: registerUser.name, 
+                            password:registerUser.password
                         })
                     })
                         .then(res => res.json())
@@ -63,21 +64,21 @@ export const Register = () => {
             </dialog>
 
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for Application Name</h1>
+                <h1 className="h3 mb-3 font-weight-normal">Please create your Manager account</h1>
                 <fieldset>
-                    <label htmlFor="firstName"> First Name </label>
-                    <input type="text" name="firstName" id="firstName" className="form-control" placeholder="First name" required autoFocus value={registerUser.firstName} onChange={handleInputChange} />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="lastName"> Last Name </label>
-                    <input type="text" name="lastName" id="lastName" className="form-control" placeholder="Last name" required value={registerUser.lastName} onChange={handleInputChange} />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="inputEmail"> Email address </label>
+                    <label htmlFor="inputEmail">Create Manager Email address </label>
                     <input type="email" name="email" id="email" className="form-control" placeholder="Email address" required value={registerUser.email} onChange={handleInputChange} />
                 </fieldset>
                 <fieldset>
-                    <button type="submit"> Sign in </button>
+                    <label htmlFor="password">Create Manager PassWord </label>
+                    <input type="password" name="password" id="password" className="form-control" placeholder="password" required value={registerUser.password} onChange={handleInputChange} />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="name">Manager Name </label>
+                    <input type="text" name="name" id="name" className="form-control" placeholder="Name" required autoFocus value={registerUser.name} onChange={handleInputChange} />
+                </fieldset>
+                <fieldset>
+                    <button type="submit"> Register </button>
                 </fieldset>
             </form>
         </main>

@@ -45,8 +45,8 @@ export const Login = () => {
             </dialog>
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Nutshell</h1>
-                    <h2>Please sign in</h2>
+                    <h1>Workplace Management</h1>
+                    <h2>Please sign in to your manager account</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
                         <input type="email"
@@ -55,6 +55,14 @@ export const Login = () => {
                             placeholder="Email address"
                             required autoFocus
                             value={loginUser.email}
+                            onChange={handleInputChange} />
+                            <label htmlFor="password"> password</label>
+                            <input type="password"
+                            id="password"
+                            className="form-control"
+                            placeholder="password"
+                            required autoFocus
+                            value={loginUser.password}
                             onChange={handleInputChange} />
                     </fieldset>
                     <fieldset>
