@@ -12,5 +12,47 @@
       "password": "food",
       "id": 2
     }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Take out the trash.",
+      "description": "Go through the entire wearhouse, empty and takeout all of the trash, then put new trash bags in the trash cans",
+      "managerId": 1,
+      "completed": false
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name":"Jimmy Jammy",
+      "managerId":1
+      
+    },
+    {
+      "id": 2,
+      "name":"Sally Serial",
+      "managerId":1
+      
+    },
+    {
+      "id": 3,
+      "name":"Murmaider Moe",
+      "managerId":1
+      
+    },
+    {
+      "id": 4,
+      "name":"Ashy Slashy",
+      "managerId":1
+      
+    }
+  ],
+  "employeeTasks": [
+    {
+      "id":1,
+      "employeeId":1,
+      "taskId":1
+    }
   ]
 }
