@@ -14,7 +14,7 @@ export const TasksList = () => {
 
     }, [])
 
-    const history = useHistory()
+    // const history = useHistory()
 
     return (
         <>
