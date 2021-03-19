@@ -20,6 +20,13 @@
       "description": "Go through the entire wearhouse, empty and takeout all of the trash, then put new trash bags in the trash cans",
       "managerId": 1,
       "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Take out the trash again.",
+      "description": " again Go through the entire wearhouse, empty and takeout all of the trash, then put new trash bags in the trash cans",
+      "managerId": 1,
+      "completed": false
     }
   ],
   "employees": [

@@ -1,10 +1,10 @@
 import React, { useState, createContext } from "react"
 
 // The context is imported and used by individual components that need data
-export const TaskContext = createContext() 
+export const TasksContext = createContext() 
 
 // This component establishes what data can be used.
-export const TaskProvider = (props) => {
+export const TasksProvider = (props) => {
     const [tasks, setTasks] = useState([])
 
 
