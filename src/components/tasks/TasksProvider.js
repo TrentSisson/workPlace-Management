@@ -29,8 +29,14 @@ const addTasks = tasksObj => {
     .then(response => response.json())
 }
 
+const deleteTasks = tasksId => {
+    return fetch(`http://localhost:8088/tasks/${tasksId}`, {
+        method: "DELETE",
+    })
+    .then(getTasks)
 
 
+}
 
 
 
@@ -42,7 +48,7 @@ const addTasks = tasksObj => {
     */
         return (
             <TasksContext.Provider value={{
-                tasks, getTasks, addTasks
+                tasks, getTasks, addTasks, deleteTasks
             }}>
                 {props.children}
             </TasksContext.Provider>
