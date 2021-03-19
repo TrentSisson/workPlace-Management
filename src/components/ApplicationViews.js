@@ -5,6 +5,7 @@ import { TasksList } from "./tasks/TasksList"
 import { EmployeeList } from "./employees/EmployeeList"
 import { EmployeeProvider } from "./employees/EmployeesProvider.js"
 import { TasksForm } from "./tasks/CreateTasks"
+import { EmployeeForm } from "./employees/CreateEmployee.js"
 
 
 
@@ -23,6 +24,9 @@ export const ApplicationViews = () => {
                 </Route>
                 <Route exact path= "/createTask">
                     < TasksForm />
+                </Route>
+                <Route exact path= "/createEmployee">
+                    < EmployeeForm />
                 </Route>
                 
                 </EmployeeProvider>

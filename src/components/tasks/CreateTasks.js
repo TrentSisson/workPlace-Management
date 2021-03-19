@@ -64,7 +64,7 @@ export const  TasksForm = () => {
     }
     
     return (
-        <form className="animalForm">
+        <form className="TaskForm">
       <h2 className="animalForm__title">New Task</h2>
       <fieldset>
         <div className="form-group">
@@ -80,7 +80,7 @@ export const  TasksForm = () => {
       </fieldset>
       
       <button className="btn btn-primary" onClick={handleClickSaveTask}>
-        Save Animal
+        Save Task
           </button>
     </form>
   )
