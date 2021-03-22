@@ -27,6 +27,7 @@ const addTasks = tasksObj => {
         body: JSON.stringify(tasksObj)
     })
     .then(response => response.json())
+    .then(getTasks)
 }
 
 const deleteTasks = tasksId => {
@@ -37,8 +38,17 @@ const deleteTasks = tasksId => {
 
 
 }
+const addEmployeeTasks = employeeTasksObj => {
+    return fetch("http://localhost:8088/employeeTasks", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(employeeTasksObj)
+    })
+    .then(response => response.json())
 
-
+}
 
    /*
         You return a context provider which has the
@@ -48,7 +58,7 @@ const deleteTasks = tasksId => {
     */
         return (
             <TasksContext.Provider value={{
-                tasks, getTasks, addTasks, deleteTasks
+                tasks, getTasks, addTasks, deleteTasks, addEmployeeTasks
             }}>
                 {props.children}
             </TasksContext.Provider>
