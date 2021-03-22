@@ -13,7 +13,7 @@
       "id": 2
     },
     {
-      "email": "goskuSUCKS@IamTHEprinceOFallSayians.com",
+      "email": "gokuSUCKS@IamTHEprinceOFallSayians.com",
       "name": "Vegeta",
       "password": "die",
       "id": 3
@@ -29,7 +29,7 @@
     },
     {
       "title": "paint picture",
-      "description": "create several creepy clown painting",
+      "description": "create several creepy clown paintings",
       "managerId": 3,
       "completed": false,
       "id": 4
@@ -404,6 +404,62 @@
       "managerId": 3,
       "completed": false,
       "id": 58
+    },
+    {
+      "title": "please work",
+      "description": "test",
+      "managerId": 3,
+      "completed": false,
+      "id": 59
+    },
+    {
+      "title": "version 3000",
+      "description": "test",
+      "managerId": 3,
+      "completed": false,
+      "id": 60
+    },
+    {
+      "title": "big test",
+      "description": "big",
+      "managerId": 3,
+      "completed": false,
+      "id": 61
+    },
+    {
+      "title": "big test 10",
+      "description": "bigbig",
+      "managerId": 3,
+      "completed": false,
+      "id": 62
+    },
+    {
+      "title": "phill",
+      "description": "phan",
+      "managerId": 3,
+      "completed": false,
+      "id": 63
+    },
+    {
+      "title": "phillphan",
+      "description": "phanphill",
+      "managerId": 3,
+      "completed": false,
+      "id": 66
+    },
+    {
+      "title": "calvin",
+      "description": "courter",
+      "managerId": 3,
+      "completed": false,
+      "id": 67
+    },
+    {
+      "title": "pleasre",
+      "description": "god",
+      "managerId": 3,
+      "completed": false,
+      "id": 68
     }
   ],
   "employees": [
@@ -466,6 +522,11 @@
       "name": "Guy Sensei",
       "managerId": 3,
       "id": 16
+    },
+    {
+      "name": "Axe Thrasher",
+      "managerId": 3,
+      "id": 17
     }
   ],
   "employeeTasks": [
@@ -515,119 +576,12 @@
       "id": 9
     },
     {
-      "employeeId": 2,
-      "taskId": 10,
+      "taskId": 67,
       "id": 10
     },
     {
-      "employeeId": 2,
-      "taskId": 10,
+      "taskId": 68,
       "id": 11
-    },
-    {
-      "employeeId": 2,
-      "taskId": 10,
-      "id": 12
-    },
-    {
-      "employeeId": 2,
-      "taskId": 10,
-      "id": 13
-    },
-    {
-      "employeeId": 2,
-      "taskId": 10,
-      "id": 14
-    },
-    {
-      "employeeId": 2,
-      "taskId": 10,
-      "id": 15
-    },
-    {
-      "employeeId": 2,
-      "taskId": 10,
-      "id": 16
-    },
-    {
-      "employeeId": 2,
-      "taskId": 10,
-      "id": 17
-    },
-    {
-      "employeeId": 2,
-      "taskId": 10,
-      "id": 18
-    },
-    {
-      "employeeId": 2,
-      "taskId": 10,
-      "id": 19
-    },
-    {
-      "employeeId": 2,
-      "taskId": 10,
-      "id": 20
-    },
-    {
-      "employeeId": 2,
-      "taskId": 10,
-      "id": 21
-    },
-    {
-      "employeeId": 2,
-      "taskId": 1,
-      "id": 22
-    },
-    {
-      "employeeId": 2,
-      "taskId": 1,
-      "id": 23
-    },
-    {
-      "employeeId": 2,
-      "taskId": 1,
-      "id": 24
-    },
-    {
-      "employeeId": 2,
-      "taskId": 1,
-      "id": 25
-    },
-    {
-      "employeeId": 2,
-      "taskId": 5,
-      "id": 26
-    },
-    {
-      "employeeId": 2,
-      "taskId": 5,
-      "id": 27
-    },
-    {
-      "employeeId": 2,
-      "taskId": 5,
-      "id": 28
-    },
-    {
-      "employeeId": 2,
-      "taskId": 5,
-      "id": 29
-    },
-    {
-      "employeeId": 2,
-      "taskId": 5,
-      "id": 30
-    },
-    {
-      "employeeId": 2,
-      "taskId": 5,
-      "id": 31
-    },
-    {
-      "employeeId": 2,
-      "taskId": 5,
-      "id": 32
     }
   ]
 }

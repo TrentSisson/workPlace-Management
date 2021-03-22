@@ -61,6 +61,25 @@ export const TasksForm = () => {
     setTask(newTask)
     setEmployeeTask(newEmployeeTask)
   }
+  const handleClickSaveEmployeeTask = (res) => {
+    // event.preventDefault()
+
+
+    const newEmployeeTask = {
+      employeeId: employeeTask.id,
+      taskId: res.id
+    }
+    
+      // .then(() => {
+      //   const foundTask = tasks.find((title) => title == task.title)
+      //   console.log(tasks)
+        addEmployeeTasks(newEmployeeTask)
+      
+
+    // .then(() => history.push("/"))
+
+
+  }
   // console.log(foundTask)
   // console.log(tasks)
 
@@ -76,43 +95,24 @@ export const TasksForm = () => {
     //   employeeId: 2,
     //   taskId: foundTask.id
     // }
-    let foundTask = 0
+    // let foundTask = 0
 
     const newTask = {
       title: task.title,
       description: task.description,
       managerId: task.managerId,
       completed: task.completed
-
+      
     }
     addTasks(newTask)
-    console.log(tasks)
-      
-  }
+    .then(res => handleClickSaveEmployeeTask(res))
 
+    
+  }
 
   // .then(() => history.push("/"))
-
-
-
-  const handleClickSaveEmployeeTask = () => {
-    // event.preventDefault()
-
-
-    const newEmployeeTask = {
-      employeeId: 2,
-      taskId: 5
-    }
-    getTasks()
-      .then(() => {
-        const foundTask = tasks.find((title) => title == task.title)
-        console.log(tasks)
-        addEmployeeTasks(newEmployeeTask)
-      })
-      // .then(() => history.push("/"))
-
-
-  }
+  
+  
   return (
     <form className="TaskForm">
       <h2 className="animalForm__title">New Task</h2>
@@ -131,6 +131,7 @@ export const TasksForm = () => {
       <Multiselect
         options={employees}
         displayValue="name"
+        onClick = {e => {console.log(e.target.value)}}
       />
 
       {/* onSelect(selectedList, selectedItem) {
