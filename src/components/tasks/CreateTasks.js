@@ -15,6 +15,7 @@ export const TasksForm = () => {
   //   options: [{ name: 'Srigar', id: 1 }, { name: 'Sam', id: 2 }]
   // };
   // console.log(this.state)
+const [selectedEmployees, setSelectedEmployees] = useState([])
 
 
   /*
@@ -61,41 +62,15 @@ export const TasksForm = () => {
     setTask(newTask)
     setEmployeeTask(newEmployeeTask)
   }
-  const handleClickSaveEmployeeTask = (res) => {
-    // event.preventDefault()
+  
+   
 
 
-    const newEmployeeTask = {
-      employeeId: employeeTask.id,
-      taskId: res.id
-    }
-    
-      // .then(() => {
-      //   const foundTask = tasks.find((title) => title == task.title)
-      //   console.log(tasks)
-        addEmployeeTasks(newEmployeeTask)
-      
-
-    // .then(() => history.push("/"))
-
-
-  }
-  // console.log(foundTask)
-  // console.log(tasks)
+  
+  
 
   const handleClickSaveTask = (event) => {
-    // event.preventDefault() //Prevents the browser from submitting the form
-
-
-
-    //Invoke addTasks passing the new task object as an argument
-    //Once complete, change the url and display the tasks list
-
-    // const newEmployeeTask = {
-    //   employeeId: 2,
-    //   taskId: foundTask.id
-    // }
-    // let foundTask = 0
+    
 
     const newTask = {
       title: task.title,
@@ -105,13 +80,34 @@ export const TasksForm = () => {
       
     }
     addTasks(newTask)
-    .then(res => handleClickSaveEmployeeTask(res))
+    .then(res => {
+      console.log(res)
+     const employeeTasks = selectedEmployees.map(employee => {
+       const newEmployeeTask = {
+           employeeId: employee.id,
+           taskId: res.id
+     }
+     addEmployeeTasks(newEmployeeTask)
+     return newEmployeeTask
+     })
+     console.log(employeeTasks)
 
-    
+
+    })
   }
+const handleMultiSelect = (selectedList,selectedItem ) => {
+  const newSelectedEmployees = selectedEmployees.slice()
+   newSelectedEmployees.push(selectedItem)
+  setSelectedEmployees(newSelectedEmployees)
 
-  // .then(() => history.push("/"))
+}
+const handleMultiSelectRemove = (selectedList,removedItem ) => {
+  const newSelectedEmployees = selectedEmployees.slice()
+  const filteredEmployees = newSelectedEmployees.filter(employee => employee.id !== removedItem.id)
   
+  setSelectedEmployees(filteredEmployees)
+
+}
   
   return (
     <form className="TaskForm">
@@ -131,7 +127,9 @@ export const TasksForm = () => {
       <Multiselect
         options={employees}
         displayValue="name"
-        onClick = {e => {console.log(e.target.value)}}
+        onClick = {e => {console.log(e)}}
+        onSelect={handleMultiSelect}
+        onRemove={handleMultiSelectRemove}
       />
 
       {/* onSelect(selectedList, selectedItem) {
