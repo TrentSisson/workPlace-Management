@@ -44,7 +44,9 @@ const [selectedEmployees, setSelectedEmployees] = useState([])
 
   useEffect(() => {
     getEmployees()
+    // .then(employees.filter(e => e.managerId == (sessionStorage.getItem("managerId"))))
   }, [])
+  const filteredEmployees = employees.filter(e => e.managerId == (sessionStorage.getItem("managerId")))
   // console.log(employees)
   //when a field changes, update state. The return will re-render and display based on the values in state
   //Controlled component
@@ -125,20 +127,12 @@ const handleMultiSelectRemove = (selectedList,removedItem ) => {
         </div>
       </fieldset>
       <Multiselect
-        options={employees}
+        options={filteredEmployees}
         displayValue="name"
         onClick = {e => {console.log(e)}}
         onSelect={handleMultiSelect}
         onRemove={handleMultiSelectRemove}
       />
-
-      {/* onSelect(selectedList, selectedItem) {
-  ...
-}
-
-onRemove(selectedList, removedItem) {
-  ...
-} */}
 
       <button type="button" className="btn btn-primary" onClick={handleClickSaveTask}>
         Save Task
