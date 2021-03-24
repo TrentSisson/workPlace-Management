@@ -36,10 +36,18 @@ export const TaskDetail = () => {
             <h3 className="task__description"><b>Task Detail:</b> {tasks.description}</h3>
              <h3 className="task__employees">Employee Name {employeeNames.map(e => {
                  return(
-                     e.employee.name
+                <section>
+                    <div>{e.employee.name}</div>
+                    {/* in the morning write the delete fetch 
+                    in order for this button to work */} 
+                   <div><button onclick={deleteEmployee(e.id)}>delete</button></div>
+                </section>
                  
                  )
              })}</h3>
+             <button onClick={() => {
+                history.push(`/task/edit/${tasks.id}`)
+            }}>Edit</button>
 
         </section>
         )

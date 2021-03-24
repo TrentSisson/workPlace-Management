@@ -42,11 +42,11 @@
       "id": 90
     },
     {
-      "title": "defeat the evil",
-      "description": "defeat all the evil ooze minions!",
+      "id": 91,
+      "title": "Defeated the evil once and for all",
+      "description": "Time to recover after battle",
       "managerId": 3,
-      "completed": false,
-      "id": 91
+      "completed": false
     }
   ],
   "employees": [

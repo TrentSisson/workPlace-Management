@@ -25,7 +25,7 @@ const getTasksById = (taskId) => {
 
 
 const updateTasks = task => {
-    return fetch(`http://localhost:8088/tasks/`, {
+    return fetch(`http://localhost:8088/tasks/${task.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
@@ -78,7 +78,7 @@ const addEmployeeTasks = employeeTasksObj => {
     */
         return (
             <TasksContext.Provider value={{
-                tasks, getTasks, addTasks, deleteTasks, addEmployeeTasks, getTasksById
+                tasks, getTasks, addTasks, deleteTasks, addEmployeeTasks, getTasksById, updateTasks
             }}>
                 {props.children}
             </TasksContext.Provider>
