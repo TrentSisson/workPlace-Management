@@ -47,13 +47,6 @@
       "managerId": 3,
       "completed": false,
       "id": 91
-    },
-    {
-      "title": "",
-      "description": "",
-      "managerId": 3,
-      "completed": false,
-      "id": 92
     }
   ],
   "employees": [
@@ -173,21 +166,6 @@
       "employeeId": 12,
       "taskId": 91,
       "id": 9
-    },
-    {
-      "employeeId": 15,
-      "taskId": 92,
-      "id": 10
-    },
-    {
-      "employeeId": 17,
-      "taskId": 92,
-      "id": 11
-    },
-    {
-      "employeeId": 16,
-      "taskId": 92,
-      "id": 12
     }
   ]
 }

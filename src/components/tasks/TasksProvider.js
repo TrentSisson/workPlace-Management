@@ -6,6 +6,7 @@ export const TasksContext = createContext()
 // This component establishes what data can be used.
 export const TasksProvider = (props) => {
     const [tasks, setTasks] = useState([])
+    
 
 
 
@@ -15,6 +16,13 @@ const getTasks = () => {
     .then(res => res.json())
     .then(setTasks)
 }
+
+const getTasksById = (taskId) => {
+    return fetch(`http://localhost:8088/tasks/${taskId}`)
+    .then(res => res.json())
+    
+}
+
 
 const updateTasks = task => {
     return fetch(`http://localhost:8088/tasks/`, {
@@ -70,7 +78,7 @@ const addEmployeeTasks = employeeTasksObj => {
     */
         return (
             <TasksContext.Provider value={{
-                tasks, getTasks, addTasks, deleteTasks, addEmployeeTasks
+                tasks, getTasks, addTasks, deleteTasks, addEmployeeTasks, getTasksById
             }}>
                 {props.children}
             </TasksContext.Provider>
