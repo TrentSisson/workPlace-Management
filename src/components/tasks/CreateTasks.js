@@ -113,6 +113,7 @@ const [selectedEmployees, setSelectedEmployees] = useState([])
         
         
       })
+      .then( history.push("/"))
     }
   }
 const handleMultiSelect = (selectedList,selectedItem ) => {

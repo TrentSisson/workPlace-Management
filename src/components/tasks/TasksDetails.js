@@ -38,9 +38,8 @@ export const TaskDetail = () => {
                  return(
                 <section>
                     <div>{e.employee.name}</div>
-                    {/* in the morning write the delete fetch 
-                    in order for this button to work */} 
-                   <div><button onclick={deleteEmployee(e.id)}>delete</button></div>
+                    
+                   {/* <button onclick={deleteEmployee(e.id)}>delete</button> */}
                 </section>
                  
                  )
