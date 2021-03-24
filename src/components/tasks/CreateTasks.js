@@ -8,7 +8,7 @@ import { EmployeeContext } from "../employees/EmployeesProvider"
 
 
 export const TasksForm = () => {
-  const { addTasks, getTasks, addEmployeeTasks, tasks } = useContext(TasksContext)
+  const { addTasks, getTasksById, addEmployeeTasks, tasks,updateTasks } = useContext(TasksContext)
   const { getEmployees, employees } = useContext(EmployeeContext)
 
   // this.state = {
@@ -43,8 +43,17 @@ const [selectedEmployees, setSelectedEmployees] = useState([])
   const history = useHistory();
 
   useEffect(() => {
-    getEmployees()
+    getEmployees().then(()=>{
+      if(taskId){
+        getTasksById(taskId)
+        .then(task => {
+          setTask(task)
+        })
+      }
+    })
+    // .then(employees.filter(e => e.managerId == (sessionStorage.getItem("managerId"))))
   }, [])
+  const filteredEmployees = employees.filter(e => e.managerId == (sessionStorage.getItem("managerId")))
   // console.log(employees)
   //when a field changes, update state. The return will re-render and display based on the values in state
   //Controlled component
@@ -67,33 +76,44 @@ const [selectedEmployees, setSelectedEmployees] = useState([])
 
 
   
-  
+  const {taskId} = useParams();
 
   const handleClickSaveTask = (event) => {
-    
+    if(taskId){
+      updateTasks({
+        id:task.id,
+        title:task.title,
+        description:task.description,
+        managerId: task.managerId,
+        completed: task.completed
+      })
+      .then( history.push(`/task/detail/${taskId}`))
+    }else{
 
-    const newTask = {
-      title: task.title,
-      description: task.description,
-      managerId: task.managerId,
-      completed: task.completed
       
+      const newTask = {
+        title: task.title,
+        description: task.description,
+        managerId: task.managerId,
+        completed: task.completed
+        
+      }
+      addTasks(newTask)
+      .then(res => {
+        console.log(res)
+        const employeeTasks = selectedEmployees.map(employee => {
+          const newEmployeeTask = {
+            employeeId: employee.id,
+            taskId: res.id
+          }
+          addEmployeeTasks(newEmployeeTask)
+          return newEmployeeTask
+        })
+        console.log(employeeTasks)
+        
+        
+      })
     }
-    addTasks(newTask)
-    .then(res => {
-      console.log(res)
-     const employeeTasks = selectedEmployees.map(employee => {
-       const newEmployeeTask = {
-           employeeId: employee.id,
-           taskId: res.id
-     }
-     addEmployeeTasks(newEmployeeTask)
-     return newEmployeeTask
-     })
-     console.log(employeeTasks)
-
-
-    })
   }
 const handleMultiSelect = (selectedList,selectedItem ) => {
   const newSelectedEmployees = selectedEmployees.slice()
@@ -108,10 +128,11 @@ const handleMultiSelectRemove = (selectedList,removedItem ) => {
   setSelectedEmployees(filteredEmployees)
 
 }
-  
-  return (
-    <form className="TaskForm">
-      <h2 className="animalForm__title">New Task</h2>
+  if(taskId){
+
+    return (
+      <form className="TaskForm">
+      <h2 className="animalForm__title">{taskId ? "Edit Task" : "Add Task"}</h2>
       <fieldset>
         <div className="form-group">
           <label htmlFor="name">Task title:</label>
@@ -124,25 +145,37 @@ const handleMultiSelectRemove = (selectedList,removedItem ) => {
           <input type="text" id="description" required autoFocus className="form-control" placeholder="Task description" value={task.description} onChange={handleControlledInputChange} />
         </div>
       </fieldset>
-      <Multiselect
-        options={employees}
-        displayValue="name"
-        onClick = {e => {console.log(e)}}
-        onSelect={handleMultiSelect}
-        onRemove={handleMultiSelectRemove}
-      />
-
-      {/* onSelect(selectedList, selectedItem) {
-  ...
-}
-
-onRemove(selectedList, removedItem) {
-  ...
-} */}
-
       <button type="button" className="btn btn-primary" onClick={handleClickSaveTask}>
         Save Task
           </button>
     </form>
   )
+}else return(
+    <form className="TaskForm">
+    <h2 className="animalForm__title">{taskId ? "Edit Task" : "Add Task"}</h2>
+    <fieldset>
+      <div className="form-group">
+        <label htmlFor="name">Task title:</label>
+        <input type="text" id="title" required autoFocus className="form-control" placeholder="Task title" value={task.title} onChange={handleControlledInputChange} />
+      </div>
+    </fieldset>
+    <fieldset>
+      <div className="form-group">
+        <label htmlFor="name">Task description:</label>
+        <input type="text" id="description" required autoFocus className="form-control" placeholder="Task description" value={task.description} onChange={handleControlledInputChange} />
+      </div>
+    </fieldset>
+    <Multiselect
+      options={filteredEmployees}
+      displayValue="name"
+      onClick = {e => {console.log(e)}}
+      onSelect={handleMultiSelect}
+      onRemove={handleMultiSelectRemove}
+      />
+
+    <button type="button" className="btn btn-primary" onClick={handleClickSaveTask}>
+      Save Task
+        </button>
+  </form>
+)
 }
