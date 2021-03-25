@@ -28,25 +28,18 @@
       "id": 3
     },
     {
-      "title": "here we go",
-      "description": "gogo",
+      "title": "take out the Trash",
+      "description": "take out the trash in every bin in the warehouse",
       "managerId": 3,
-      "completed": false,
-      "id": 89
+      "completed": 4,
+      "id": 4
     },
     {
-      "title": "take out the trash",
-      "description": "take out all of the trash in the building",
+      "title": "check",
+      "description": "check",
       "managerId": 3,
-      "completed": false,
-      "id": 90
-    },
-    {
-      "id": 91,
-      "title": "Defeated the evil once and for all",
-      "description": "Time to recover after battle",
-      "managerId": 3,
-      "completed": false
+      "completed": true,
+      "id": 5
     }
   ],
   "employees": [
@@ -79,11 +72,6 @@
       "name": "Yamcha zman",
       "managerId": 3,
       "id": 10
-    },
-    {
-      "name": "Master Roshi",
-      "managerId": 3,
-      "id": 11
     },
     {
       "name": "Naruto uzumaki",
@@ -123,49 +111,24 @@
   ],
   "employeeTasks": [
     {
-      "employeeId": 15,
-      "taskId": 89,
+      "employeeId": 14,
+      "taskId": 4,
       "id": 1
     },
     {
-      "employeeId": 14,
-      "taskId": 89,
+      "employeeId": 13,
+      "taskId": 4,
       "id": 2
     },
     {
-      "employeeId": 13,
-      "taskId": 89,
+      "employeeId": 9,
+      "taskId": 5,
       "id": 3
     },
     {
-      "employeeId": 5,
-      "taskId": 90,
+      "employeeId": 10,
+      "taskId": 5,
       "id": 4
-    },
-    {
-      "employeeId": 11,
-      "taskId": 90,
-      "id": 5
-    },
-    {
-      "employeeId": 18,
-      "taskId": 91,
-      "id": 6
-    },
-    {
-      "employeeId": 16,
-      "taskId": 91,
-      "id": 7
-    },
-    {
-      "employeeId": 14,
-      "taskId": 91,
-      "id": 8
-    },
-    {
-      "employeeId": 12,
-      "taskId": 91,
-      "id": 9
     }
   ]
 }

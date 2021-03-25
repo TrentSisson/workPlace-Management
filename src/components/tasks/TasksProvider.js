@@ -35,7 +35,22 @@ const updateTasks = task => {
       .then(getTasks)
   }
 
+  const completedTask = (taskId,boolean) =>{
+    return fetch(`http://localhost:8088/tasks/${taskId}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/Json; charset=UTF-8"
+        },
+        body: JSON.stringify({
+            completed: boolean
+        })
+    })
 
+.then(response => response.json())
+.then(getTasks)
+
+
+}
 
 
 const addTasks = tasksObj => {
@@ -47,7 +62,6 @@ const addTasks = tasksObj => {
         body: JSON.stringify(tasksObj)
     })
     .then(response => response.json())
-    // .then(getTasks)
 }
 
 const deleteTasks = tasksId => {
@@ -78,7 +92,7 @@ const addEmployeeTasks = employeeTasksObj => {
     */
         return (
             <TasksContext.Provider value={{
-                tasks, getTasks, addTasks, deleteTasks, addEmployeeTasks, getTasksById, updateTasks
+                tasks, getTasks, addTasks, deleteTasks, addEmployeeTasks, getTasksById, updateTasks, completedTask
             }}>
                 {props.children}
             </TasksContext.Provider>

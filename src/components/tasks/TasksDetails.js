@@ -6,7 +6,7 @@ import { EmployeeContext } from "../employees/EmployeesProvider.js"
 
 export const TaskDetail = () => {
     const {getTasksById,  } = useContext(TasksContext)
-    const {getEmployeeTask, employeeTask} = useContext(EmployeeContext)
+    const {getEmployeeTask, employeeTask, deleteEmployeeTask} = useContext(EmployeeContext)
 
      const [tasks, setTasks] = useState({})
 
@@ -37,12 +37,12 @@ export const TaskDetail = () => {
              <h3 className="task__employees">Employee Name {employeeNames.map(e => {
                  return(
                 <section>
-                    <div>{e.employee.name}</div>
-                    {/* in the morning write the delete fetch 
-                    in order for this button to work */} 
-                   <div><button onclick={deleteEmployee(e.id)}>delete</button></div>
+                    <div>{e.employee.name}
+                    
+                    <button onClick={()=>deleteEmployeeTask(e.id)}>delete</button>
+                    </div>
+                    
                 </section>
-                 
                  )
              })}</h3>
              <button onClick={() => {
