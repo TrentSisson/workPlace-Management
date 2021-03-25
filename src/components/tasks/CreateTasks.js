@@ -107,7 +107,7 @@ const [selectedEmployees, setSelectedEmployees] = useState([])
             taskId: res.id
           }
           addEmployeeTasks(newEmployeeTask)
-          return newEmployeeTask
+          
         })
         console.log(employeeTasks)
         
