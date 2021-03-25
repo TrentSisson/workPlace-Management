@@ -28,18 +28,25 @@
       "id": 3
     },
     {
-      "title": "take out the Trash",
-      "description": "take out the trash in every bin in the warehouse",
-      "managerId": 3,
-      "completed": 4,
-      "id": 4
-    },
-    {
       "title": "check",
       "description": "check",
       "managerId": 3,
       "completed": true,
       "id": 5
+    },
+    {
+      "title": "bake cakes",
+      "description": "make 27 cakes for the huge town party",
+      "managerId": 3,
+      "completed": false,
+      "id": 6
+    },
+    {
+      "title": "change fryer grease",
+      "description": "change the grease for all the fryers in the restaurant",
+      "managerId": 3,
+      "completed": false,
+      "id": 8
     }
   ],
   "employees": [
@@ -62,11 +69,6 @@
       "name": "Lil PP",
       "managerId": 1,
       "id": 8
-    },
-    {
-      "name": "John Wayne Gacy Jr.",
-      "managerId": 3,
-      "id": 9
     },
     {
       "name": "Yamcha zman",
@@ -107,28 +109,58 @@
       "name": "Red PowerRanger",
       "managerId": 3,
       "id": 18
+    },
+    {
+      "name": "Phillip Phann",
+      "managerId": 3,
+      "id": 19
+    },
+    {
+      "name": "Mr. Krabs",
+      "managerId": 3,
+      "id": 20
+    },
+    {
+      "name": "Blade",
+      "managerId": 3,
+      "id": 21
+    },
+    {
+      "name": "Wonder Boy",
+      "managerId": 3,
+      "id": 22
+    },
+    {
+      "name": "One Punch",
+      "managerId": 3,
+      "id": 23
     }
   ],
   "employeeTasks": [
     {
-      "employeeId": 14,
-      "taskId": 4,
-      "id": 1
-    },
-    {
-      "employeeId": 13,
-      "taskId": 4,
-      "id": 2
-    },
-    {
-      "employeeId": 9,
-      "taskId": 5,
-      "id": 3
-    },
-    {
       "employeeId": 10,
       "taskId": 5,
       "id": 4
+    },
+    {
+      "employeeId": 23,
+      "taskId": 6,
+      "id": 5
+    },
+    {
+      "employeeId": 13,
+      "taskId": 6,
+      "id": 6
+    },
+    {
+      "employeeId": 21,
+      "taskId": 8,
+      "id": 9
+    },
+    {
+      "employeeId": 20,
+      "taskId": 8,
+      "id": 10
     }
   ]
 }
