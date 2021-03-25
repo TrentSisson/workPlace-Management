@@ -35,11 +35,11 @@
       "id": 5
     },
     {
+      "id": 6,
       "title": "bake cakes",
-      "description": "make 27 cakes for the huge town party",
+      "description": "make 29 cakes for the huge town party",
       "managerId": 3,
-      "completed": false,
-      "id": 6
+      "completed": false
     },
     {
       "title": "change fryer grease",
@@ -47,6 +47,62 @@
       "managerId": 3,
       "completed": false,
       "id": 8
+    },
+    {
+      "title": "make statue",
+      "description": "make a statue of our great leader Phillip Phan",
+      "managerId": 3,
+      "completed": false,
+      "id": 9
+    },
+    {
+      "title": "write a book",
+      "description": "write a book about Erica's life",
+      "managerId": 3,
+      "completed": false,
+      "id": 10
+    },
+    {
+      "title": "ok",
+      "description": "ok",
+      "managerId": 3,
+      "completed": false,
+      "id": 11
+    },
+    {
+      "title": "watch",
+      "description": "watch again",
+      "managerId": 3,
+      "completed": false,
+      "id": 13
+    },
+    {
+      "title": "MVP",
+      "description": "pass MVP with Jisie and be super Proud of all our hard work!",
+      "managerId": 3,
+      "completed": false,
+      "id": 14
+    },
+    {
+      "title": "test",
+      "description": "test",
+      "managerId": 3,
+      "completed": false,
+      "id": 15
+    },
+    {
+      "title": "testing",
+      "description": "testing",
+      "managerId": 3,
+      "completed": false,
+      "id": 16
+    },
+    {
+      "title": "kill goku",
+      "description": "destroy kakorat",
+      "managerId": 3,
+      "completed": false,
+      "id": 17
     }
   ],
   "employees": [
@@ -69,11 +125,6 @@
       "name": "Lil PP",
       "managerId": 1,
       "id": 8
-    },
-    {
-      "name": "Yamcha zman",
-      "managerId": 3,
-      "id": 10
     },
     {
       "name": "Naruto uzumaki",
@@ -111,16 +162,6 @@
       "id": 18
     },
     {
-      "name": "Phillip Phann",
-      "managerId": 3,
-      "id": 19
-    },
-    {
-      "name": "Mr. Krabs",
-      "managerId": 3,
-      "id": 20
-    },
-    {
       "name": "Blade",
       "managerId": 3,
       "id": 21
@@ -134,14 +175,39 @@
       "name": "One Punch",
       "managerId": 3,
       "id": 23
+    },
+    {
+      "name": "Trent Sisson",
+      "managerId": 3,
+      "id": 24
+    },
+    {
+      "name": "Phillip Phann",
+      "managerId": 3,
+      "id": 25
+    },
+    {
+      "name": "Nicole Tatum",
+      "managerId": 3,
+      "id": 26
+    },
+    {
+      "name": "Erica Thompson",
+      "managerId": 3,
+      "id": 27
+    },
+    {
+      "name": "Alex Prieu",
+      "managerId": 3,
+      "id": 29
+    },
+    {
+      "name": "Krillan",
+      "managerId": 3,
+      "id": 30
     }
   ],
   "employeeTasks": [
-    {
-      "employeeId": 10,
-      "taskId": 5,
-      "id": 4
-    },
     {
       "employeeId": 23,
       "taskId": 6,
@@ -158,9 +224,64 @@
       "id": 9
     },
     {
-      "employeeId": 20,
-      "taskId": 8,
-      "id": 10
+      "employeeId": 14,
+      "taskId": 9,
+      "id": 11
+    },
+    {
+      "employeeId": 22,
+      "taskId": 9,
+      "id": 12
+    },
+    {
+      "employeeId": 18,
+      "taskId": 13,
+      "id": 21
+    },
+    {
+      "employeeId": 27,
+      "taskId": 14,
+      "id": 22
+    },
+    {
+      "employeeId": 26,
+      "taskId": 14,
+      "id": 23
+    },
+    {
+      "employeeId": 25,
+      "taskId": 14,
+      "id": 24
+    },
+    {
+      "employeeId": 24,
+      "taskId": 14,
+      "id": 25
+    },
+    {
+      "employeeId": 12,
+      "taskId": 15,
+      "id": 28
+    },
+    {
+      "employeeId": 13,
+      "taskId": 15,
+      "id": 29
+    },
+    {
+      "employeeId": 12,
+      "taskId": 16,
+      "id": 31
+    },
+    {
+      "employeeId": 16,
+      "taskId": 17,
+      "id": 33
+    },
+    {
+      "employeeId": 18,
+      "taskId": 17,
+      "id": 34
     }
   ]
 }

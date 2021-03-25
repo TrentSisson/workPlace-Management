@@ -11,10 +11,7 @@ export const TasksForm = () => {
   const { addTasks, getTasksById, addEmployeeTasks, tasks,updateTasks } = useContext(TasksContext)
   const { getEmployees, employees } = useContext(EmployeeContext)
 
-  // this.state = {
-  //   options: [{ name: 'Srigar', id: 1 }, { name: 'Sam', id: 2 }]
-  // };
-  // console.log(this.state)
+  
 const [selectedEmployees, setSelectedEmployees] = useState([])
 
 
@@ -133,7 +130,7 @@ const handleMultiSelectRemove = (selectedList,removedItem ) => {
 
     return (
       <form className="TaskForm">
-      <h2 className="animalForm__title">{taskId ? "Edit Task" : "Add Task"}</h2>
+      <h2 className="taskForm__title">{taskId ? "Edit Task" : "Add Task"}</h2>
       <fieldset>
         <div className="form-group">
           <label htmlFor="name">Task title:</label>
@@ -153,7 +150,7 @@ const handleMultiSelectRemove = (selectedList,removedItem ) => {
   )
 }else return(
     <form className="TaskForm">
-    <h2 className="animalForm__title">{taskId ? "Edit Task" : "Add Task"}</h2>
+    <h2 className="taskForm__title">{taskId ? "Edit Task" : "Add Task"}</h2>
     <fieldset>
       <div className="form-group">
         <label htmlFor="name">Task title:</label>

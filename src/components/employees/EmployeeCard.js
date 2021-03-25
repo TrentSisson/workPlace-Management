@@ -12,7 +12,7 @@ const { deleteEmployee } = useContext(EmployeeContext)
     return (
       <section className="employee">
         <h3 className="employee__name">{employee.name}</h3>
-        <button onClick={() =>  deleteEmployee(employee.id) }>Delete Task</button>
+        <button onClick={() =>  deleteEmployee(employee.id) }>Delete Employee</button>
     </section>
   )}
   

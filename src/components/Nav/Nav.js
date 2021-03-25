@@ -6,7 +6,8 @@ export const NavBar = (props) => {
   const history = useHistory()
   return (
     <nav className="navbar bg-dark text-white flex-md-nowrap p-0 shadow">
-      <ul className="nav">
+       
+      <ul className="nav nav-pills nav-fill">
         <button type="button"
           onClick={() => {
             (sessionStorage.clear())
@@ -15,7 +16,6 @@ export const NavBar = (props) => {
           }>LogOut
                     </button>
 
-        <li className="nav nav-pills nav-fill">
           <li className="nav-item">
             <Link className="nav-link" to="/createEmployee">Create Employee</Link>
           </li>
@@ -29,7 +29,7 @@ export const NavBar = (props) => {
           <li className="nav-item">
             <Link className="nav-link" to="/">Task List</Link>
           </li>
-          </li>
+          
 
       </ul>
       </nav>

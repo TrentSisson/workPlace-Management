@@ -62,6 +62,7 @@ const addTasks = tasksObj => {
         body: JSON.stringify(tasksObj)
     })
     .then(response => response.json())
+    // .then(getTasks)
 }
 
 const deleteTasks = tasksId => {
